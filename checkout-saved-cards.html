@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link href="./css/style.css" rel="stylesheet">
+  <link href="./css/responsive.css" rel="stylesheet">
+  <title>Checkout | saved Cards</title>
+</head>
+
+<body>
+  <!--  -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-md" aria-label="Main navigation">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="/">
+          <img src="./images/logo.svg" alt="Company Logo">
+        </a>
+
+        <!-- Right Side (Mobile) -->
+        <div class="d-flex align-items-center gap-3">
+          <div class="hd-right mobi">
+            <!-- Cart -->
+            <div class="cart-wrap">
+              <a href="javascript:void(0)" class="dropdown-toggle" id="cartDropdownMobile" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img src="./images/cart.svg" alt="Cart icon with 2 items" width="32" height="32">
+                <span class="badge bg-danger">2</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cartDropdownDesktop">
+                <!-- <div class="cart-table">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Products</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th class="text-end">Sub-Total</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-label="Products">
+                          <div class="d-flex align-items-center">
+                            <button class="btn-close-custom me-2">&times;</button>
+                            <div class="cart-item">
+                              <figure>
+                                <img src="./images/pd-1.png" alt="Product 1">
+                              </figure>
+                              <div class="ms-2">Laminate It</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Price">$70</td>
+                        <td data-label="Quantity">50 Items</td>
+                        <td data-label="Sub-Total" class="fw-bold text-end">$70</td>
+                      </tr>
+                      <tr>
+                        <td data-label="Products">
+                          <div class="d-flex align-items-center">
+                            <button class="btn-close-custom me-2">&times;</button>
+                            <div class="cart-item">
+                              <figure>
+                                <img src="./images/pd-1.png" alt="Product 2">
+                              </figure>
+                              <div class="ms-2">Shape It!</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Price">$250</td>
+                        <td data-label="Quantity">50 Items</td>
+                        <td data-label="Sub-Total" class="fw-bold text-end">$250</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div> -->
+                <div class="sc-header">Shopping Cart</div>
+
+                <div class="sc-item">
+                  <div class="sc-details">
+                    <img src="./images/pd-1.png" alt="Backdrop">
+                    <div class="sc-name">*Life Celebration Backdrop</div>
+                  </div>
+                  <div class="sc-qty-price">
+                    <div>1</div>
+                    <div>$310.00</div>
+                    <i class="fas fa-trash"></i>
+                  </div>
+                </div>
+
+                <div class="sc-item">
+                  <div class="sc-details">
+                    <img src="./images/pd-1.png" alt="Pop-Up">
+                    <div class="sc-name">Anniversary Pop-Up</div>
+                  </div>
+                  <div class="sc-qty-price">
+                    <div>1</div>
+                    <div>$5.00</div>
+                    <i class="fas fa-trash"></i>
+                  </div>
+                </div>
+
+                <div class="sc-total">Total &nbsp;&nbsp;&nbsp;&nbsp; $315.00</div>
+
+                <div class="cart-ft">
+                  <button class="btn sc-btn sc-btn-clear"><i class="fas fa-trash"></i> CLEAR CART</button>
+                  <button class="btn sc-btn sc-btn-view"><i class="fas fa-shopping-cart"></i> VIEW CART</button>
+                  <button class="btn sc-btn sc-btn-checkout"><i class="fas fa-arrow-right"></i> CHECKOUT</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- User Dropdown -->
+            <div class="dropdown">
+              <a href="javascript:void(0)" class="d-flex align-items-center text-decoration-none dropdown-toggle"
+                id="userDropdownMobile" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="./images/user-orange.svg" alt="User avatar" width="32" height="32" class="me-2">
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdownMobile">
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="#"><img src="./images/user.svg"
+                      alt="Profile icon" width="20" height="20"> Account Profile</a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="/new-order.html"><img
+                      src="./images/storefront.svg" alt="Orders icon" width="20" height="20"> My Orders</a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="/new-order.html"><img
+                      src="./images/heart.svg" alt="Saved icon" width="20" height="20"> Saved Orders</a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="/new-order.html"><img
+                      src="./images/notebook.svg" alt="Cards icon" width="20" height="20"> Manage Cards</a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="/new-order.html"><img
+                      src="./images/mappinline.svg" alt="Address icon" width="20" height="20"> Manage Addresses</a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="javascript:void(0)"><img
+                      src="./images/signout.svg" alt="Logout icon" width="20" height="20"> Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Mobile Menu Toggle -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMain"
+            aria-controls="navbarsMain" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Collapsible Menu -->
+        <div class="collapse navbar-collapse" id="navbarsMain">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/new-order.html">My Orders</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/new-order.html">Saved Orders</a>
+            </li>
+          </ul>
+
+          <!-- Right Side (Desktop) -->
+          <div class="hd-right desk d-flex align-items-center gap-3">
+            <!-- Cart -->
+            <div class="cart-wrap">
+              <a href="javascript:void(0)" class="dropdown-toggle" id="cartDropdownDesktop" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img src="./images/cart.svg" alt="Cart icon with 2 items" width="32" height="32">
+                <span class="badge bg-danger">2</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cartDropdownDesktop">
+                <!-- <div class="cart-table">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Products</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th class="text-end">Sub-Total</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-label="Products">
+                          <div class="d-flex align-items-center">
+                            <button class="btn-close-custom me-2">&times;</button>
+                            <div class="cart-item">
+                              <figure>
+                                <img src="./images/pd-1.png" alt="Product 1">
+                              </figure>
+                              <div class="ms-2">Laminate It</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Price">$70</td>
+                        <td data-label="Quantity">50 Items</td>
+                        <td data-label="Sub-Total" class="fw-bold text-end">$70</td>
+                      </tr>
+                      <tr>
+                        <td data-label="Products">
+                          <div class="d-flex align-items-center">
+                            <button class="btn-close-custom me-2">&times;</button>
+                            <div class="cart-item">
+                              <figure>
+                                <img src="./images/pd-1.png" alt="Product 2">
+                              </figure>
+                              <div class="ms-2">Shape It!</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Price">$250</td>
+                        <td data-label="Quantity">50 Items</td>
+                        <td data-label="Sub-Total" class="fw-bold text-end">$250</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div> -->
+                <div class="sc-header">Shopping Cart</div>
+
+                <div class="sc-item">
+                  <div class="sc-details">
+                    <img src="./images/pd-1.png" alt="Backdrop">
+                    <div class="sc-name">Laminate It</div>
+                  </div>
+                  <div class="sc-qty-price">
+                    <div>1</div>
+                    <div>$310.00</div>
+                    <i class="fas fa-trash"></i>
+                  </div>
+                </div>
+
+                <div class="sc-item">
+                  <div class="sc-details">
+                    <img src="./images/pd-1.png" alt="Pop-Up">
+                    <div class="sc-name">Shape It!</div>
+                  </div>
+                  <div class="sc-qty-price">
+                    <div>1</div>
+                    <div>$5.00</div>
+                    <i class="fas fa-trash"></i>
+                  </div>
+                </div>
+
+                <div class="sc-total">Total &nbsp;&nbsp;&nbsp;&nbsp; $315.00</div>
+
+                <div class="cart-ft">
+                  <button class="btn sc-btn sc-btn-clear"><i class="fas fa-trash"></i> CLEAR CART</button>
+                  <button class="btn sc-btn sc-btn-view"><i class="fas fa-shopping-cart"></i> VIEW CART</button>
+                  <button class="btn sc-btn sc-btn-checkout"><i class="fas fa-arrow-right"></i> CHECKOUT</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- User Dropdown -->
+            <div class="dropdown">
+              <a href="javascript:void(0)" class="d-flex align-items-center text-decoration-none dropdown-toggle"
+                id="userDropdownDesktop" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="./images/user-orange.svg" alt="User avatar" width="32" height="32" class="me-2">
+                <p class="mb-0">John Deo</p>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdownDesktop">
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="#"><img src="./images/user.svg"
+                      alt="Profile icon" width="20" height="20"> Account Profile</a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="/new-order.html"><img
+                      src="./images/storefront.svg" alt="Orders icon" width="20" height="20"> My Orders</a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="/new-order.html"><img
+                      src="./images/heart.svg" alt="Saved icon" width="20" height="20"> Saved Orders</a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="/new-order.html"><img
+                      src="./images/notebook.svg" alt="Cards icon" width="20" height="20"> Manage Cards</a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="/new-order.html"><img
+                      src="./images/mappinline.svg" alt="Address icon" width="20" height="20"> Manage Addresses</a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="javascript:void(0)"><img
+                      src="./images/signout.svg" alt="Logout icon" width="20" height="20"> Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--  -->
+  <div class="cn-wrap">
+    <div class="container">
+
+
+      <div class="row">
+        <!-- Left Column -->
+        <div class="col-lg-8 mb-md-0 mb-3">
+          <!-- Address Cards -->
+          <div class="row mb-4">
+            <!-- Billing Address -->
+            <div class="col-md-6 mb-md-0 mb-3">
+              <div class="card-bill-wrapper">
+                <div class="card-bill-shop">
+                  <input class="form-check-input" type="checkbox" id="billing-check" name="billingAddress" checked>
+                  <label for="billing-check" class="card-label">
+                    <div class="card-content">
+                      <div class="d-flex align-items-center gap-2 mb-4">
+                        <!-- <div class="custom-radio"></div> -->
+                        <span class="form-check-label">Billing Address</span>
+                      </div>
+                      <h4>Kevin Gilbert</h4>
+                      <p>East Washington Square South, Word No. 04, Road No. 13/x, House no. 1320/C, Flat No. 5D70, New
+                        York, NY 10012, United States</p>
+                      <button class="edit-add" type="button">Edit Address</button>
+                      <span class="icon"><i class="fa-solid fa-money-bills"></i></span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Shipping Address -->
+            <div class="col-md-6 mb-md-0 mb-3">
+              <div class="card-bill-wrapper">
+                <div class="card-bill-shop">
+                  <input class="form-check-input" type="checkbox" id="shipping-check" name="shippingAddress" checked>
+                  <label for="shipping-check" class="card-label">
+                    <div class="card-content">
+                      <div class="d-flex align-items-center gap-2 mb-4">
+                        <!-- <div class="custom-radio"></div> -->
+                        <span class="form-check-label">Shipping Address</span>
+                      </div>
+                      <h4>Corey Siphron</h4>
+                      <p>East Washington Square South, Word No. 04, Road No. 13/x, House no. 1320/C, Flat No. 5D70, New
+                        York, NY 10012, United States</p>
+                      <button class="edit-add" type="button">Edit Address</button>
+                      <span class="icon"><i class="fa-solid fa-truck-arrow-right"></i></span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shipping Type -->
+          <div class="shipping-type">
+            <h4>Shipping Type</h4>
+            <div class="shippingType">
+              <select class="select2" id="shippingType">
+                <option>UPS Next Day Air Early Saturday ($120.00) delivery by 8, 8:30, 9 or 10 AM
+                </option>
+                <option>UPS 2 Day Air ($50.00) delivery by end of day</option>
+                <option>FedEx Next Day ($130.00) delivery by 10 AM</option>
+                <option>Standard Shipping ($15.00) delivery in 5-7 business days</option>
+              </select>
+            </div>
+            <p>Saturday delivery by 8, 8:30, 9 or 10 AM, depending on destination ZIP Code</p>
+          </div>
+
+          <!-- Payment Options -->
+          <div class="payment-option">
+            <div class="up-wrap">
+              <h4>Payment Option</h4>
+              <ul class="nav nav-tabs" id="paymentTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+                    Saved Cards
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+                    Add New Card
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-content" id="paymentTabContent">
+              <!-- Saved Cards -->
+              <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                tabindex="0">
+                <div class="d-flex align-items-center gap-4 flex-wrap p-4">
+                  <div class="card blue">
+                    <div class="amount">
+                      $95,400.00 USD
+                      <span class="checkmark">
+                        <div class="form-check p-0">
+                          <input class="form-check-input" type="radio" name="radioDefault" id="radioCard1"
+                            value="card1">
+                        </div>
+                      </span>
+                    </div>
+                    <div>
+                      <div class="card-type">Card Number</div>
+                      <div class="card-number">**** **** **** 3814</div>
+                    </div>
+                    <div class="brand">
+                      <div><img src="./images/visa.png" alt="visa"></div>
+                      <div class="name">Kevin Gilbert</div>
+                    </div>
+                  </div>
+
+                  <div class="card green">
+                    <div class="amount">
+                      $87,583.00 USD
+                      <span class="checkmark">
+                        <div class="form-check p-0">
+                          <input class="form-check-input" type="radio" name="radioDefault" id="radioCard2"
+                            value="card2">
+                        </div>
+                      </span>
+                    </div>
+                    <div>
+                      <div class="card-type">Card Number</div>
+                      <div class="card-number">**** **** **** 1761</div>
+                    </div>
+                    <div class="brand">
+                      <div><img src="./images/mastercard.png" alt="mastercard"></div>
+                      <div class="name">Kevin Gilbert</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Add New Card -->
+              <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                tabindex="0">
+                <form>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <label for="cardName" class="form-label">Name On Card</label>
+                      <input type="text" class="form-control" id="cardName" placeholder="John Doe">
+                    </div>
+
+                    <div class="col-lg-12 mt-3">
+                      <label for="cardNumber" class="form-label">Card Number</label>
+                      <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456">
+                    </div>
+
+                    <div class="col-lg-6 mt-3">
+                      <label for="expiryDate" class="form-label">Expiry Date</label>
+                      <input type="text" class="form-control" id="expiryDate" placeholder="MM/YYYY">
+                    </div>
+
+                    <div class="col-lg-6 mt-3">
+                      <label for="cvv" class="form-label">CVv</label>
+                      <input type="text" class="form-control" id="cvv" placeholder="123">
+                    </div>
+
+                    <div class="col-lg-6 mt-3">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="saveCard">
+                        <label class="form-check-label" for="saveCard">Save Card</label>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 mt-3">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="saveCard">
+                        <label class="form-check-label" for="saveCard">Primary Card</label>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-lg-4">
+          <div class="summary-box">
+            <h3>Order Summary</h3>
+
+            <div class="order-item">
+              <figure>
+                <img src="./images/pd-1.png" alt="Trifold Tributes">
+              </figure>
+              <div class="order-item-details">
+                <div class="order-item-name">Trifold Tributes</div>
+                <div class="item-qty">1 × <span style="color:#0077cc;">$70</span></div>
+              </div>
+            </div>
+
+            <div class="order-item">
+              <figure>
+                <img src="./images/pd-1.png" alt="Prayer Cards">
+              </figure>
+              <div class="order-item-details">
+                <div class="order-item-name">Prayer Cards</div>
+                <div class="item-qty">3 × <span style="color:#0077cc;">$250</span></div>
+              </div>
+            </div>
+
+            <div class="price-line"><span>Sub-total</span><b>$320</b></div>
+            <div class="price-line"><span>Shipping</span><b>Free</b></div>
+            <div class="price-line"><span>Tax</span><b>$61.99</b></div>
+            <div class="price-line total"><span>Total</span><span>$357.99 USD</span></div>
+
+            <a href="/thank-you.html" class="btn-main">PLACE ORDER <i class="ms-2 fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+
+        <!-- Logo & Contact -->
+        <div class="col-lg-3">
+          <a href="/" aria-label="Go to homepage">
+            <img src="./images/logo-white.svg" alt="Life Celebration Logo">
+          </a>
+          <div class="contact">
+            <span>Call Us At:</span>
+            <a href="tel:888-887-3782">888-887-3782</a>
+          </div>
+          <div class="contact">
+            <span>Email Us At:</span>
+            <a href="mailto:jcummings@lifecelebration.com">jcummings@lifecelebration.com</a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-3">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="#">Place New Order</a></li>
+            <li><a href="#">My Orders</a></li>
+            <li><a href="#">Saved Orders</a></li>
+          </ul>
+        </div>
+
+        <!-- About -->
+        <div class="col-lg-3">
+          <h5>About Life Celebrations</h5>
+          <p>
+            We are the profession's leader in designing, creating, and shipping customized memorial products
+            for funeral homes across America—and even one Canadian town!
+          </p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="col-lg-3">
+          <h5>Follow Us</h5>
+          <ul class="social-link">
+            <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+            <li><a href="#" aria-label="Google Plus"><i class="fa-brands fa-google-plus-g"></i></a></li>
+            <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="mailto:jcummings@lifecelebration.com" aria-label="Email"><i
+                  class="fa-solid fa-envelope"></i></a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="ft-bootm">
+      <p>© 2025 Life Celebration Inc. ® All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Javascript -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="./js/custom.js"></script>
+</body>
+
+</html>

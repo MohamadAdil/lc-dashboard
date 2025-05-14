@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link href="./css/style.css" rel="stylesheet">
+  <link href="./css/responsive.css" rel="stylesheet">
+  <title>New Order</title>
+</head>
+
+<body>
+  <!--  -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-md" aria-label="Main navigation">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="/">
+          <img src="./images/logo.svg" alt="Company Logo">
+        </a>
+
+        <!-- Right Side (Mobile) -->
+        <div class="d-flex align-items-center gap-3">
+          <div class="hd-right mobi">
+            <!-- Cart -->
+            <div class="cart-wrap">
+              <a href="javascript:void(0)" class="dropdown-toggle" id="cartDropdownMobile" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img src="./images/cart.svg" alt="Cart icon with 2 items" width="32" height="32">
+                <span class="badge bg-danger">2</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cartDropdownDesktop">
+                <!-- <div class="cart-table">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Products</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th class="text-end">Sub-Total</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-label="Products">
+                          <div class="d-flex align-items-center">
+                            <button class="btn-close-custom me-2">&times;</button>
+                            <div class="cart-item">
+                              <figure>
+                                <img src="./images/pd-1.png" alt="Product 1">
+                              </figure>
+                              <div class="ms-2">Laminate It</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Price">$70</td>
+                        <td data-label="Quantity">50 Items</td>
+                        <td data-label="Sub-Total" class="fw-bold text-end">$70</td>
+                      </tr>
+                      <tr>
+                        <td data-label="Products">
+                          <div class="d-flex align-items-center">
+                            <button class="btn-close-custom me-2">&times;</button>
+                            <div class="cart-item">
+                              <figure>
+                                <img src="./images/pd-1.png" alt="Product 2">
+                              </figure>
+                              <div class="ms-2">Shape It!</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Price">$250</td>
+                        <td data-label="Quantity">50 Items</td>
+                        <td data-label="Sub-Total" class="fw-bold text-end">$250</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div> -->
+                <div class="sc-header">Shopping Cart</div>
+
+                <div class="sc-item">
+                  <div class="sc-details">
+                    <img src="./images/pd-1.png" alt="Backdrop">
+                    <div class="sc-name">*Life Celebration Backdrop</div>
+                  </div>
+                  <div class="sc-qty-price">
+                    <div>1</div>
+                    <div>$310.00</div>
+                    <i class="fas fa-trash"></i>
+                  </div>
+                </div>
+
+                <div class="sc-item">
+                  <div class="sc-details">
+                    <img src="./images/pd-1.png" alt="Pop-Up">
+                    <div class="sc-name">Anniversary Pop-Up</div>
+                  </div>
+                  <div class="sc-qty-price">
+                    <div>1</div>
+                    <div>$5.00</div>
+                    <i class="fas fa-trash"></i>
+                  </div>
+                </div>
+
+                <div class="sc-total">Total &nbsp;&nbsp;&nbsp;&nbsp; $315.00</div>
+
+                <div class="cart-ft">
+                  <button class="btn sc-btn sc-btn-clear"><i class="fas fa-trash"></i> CLEAR CART</button>
+                  <button class="btn sc-btn sc-btn-view"><i class="fas fa-shopping-cart"></i> VIEW CART</button>
+                  <button class="btn sc-btn sc-btn-checkout"><i class="fas fa-arrow-right"></i> CHECKOUT</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- User Dropdown -->
+            <div class="dropdown">
+              <a href="javascript:void(0)" class="d-flex align-items-center text-decoration-none dropdown-toggle"
+                id="userDropdownMobile" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="./images/user-orange.svg" alt="User avatar" width="32" height="32" class="me-2">
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdownMobile">
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="#"><img src="./images/user.svg"
+                      alt="Profile icon" width="20" height="20"> Account Profile</a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="/new-order.html"><img
+                      src="./images/storefront.svg" alt="Orders icon" width="20" height="20"> My Orders</a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="/new-order.html"><img
+                      src="./images/heart.svg" alt="Saved icon" width="20" height="20"> Saved Orders</a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="/new-order.html"><img
+                      src="./images/notebook.svg" alt="Cards icon" width="20" height="20"> Manage Cards</a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="/new-order.html"><img
+                      src="./images/mappinline.svg" alt="Address icon" width="20" height="20"> Manage Addresses</a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="javascript:void(0)"><img
+                      src="./images/signout.svg" alt="Logout icon" width="20" height="20"> Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Mobile Menu Toggle -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMain"
+            aria-controls="navbarsMain" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Collapsible Menu -->
+        <div class="collapse navbar-collapse" id="navbarsMain">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/new-order.html">My Orders</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/new-order.html">Saved Orders</a>
+            </li>
+          </ul>
+
+          <!-- Right Side (Desktop) -->
+          <div class="hd-right desk d-flex align-items-center gap-3">
+            <!-- Cart -->
+            <div class="cart-wrap">
+              <a href="javascript:void(0)" class="dropdown-toggle" id="cartDropdownDesktop" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img src="./images/cart.svg" alt="Cart icon with 2 items" width="32" height="32">
+                <span class="badge bg-danger">2</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cartDropdownDesktop">
+                <!-- <div class="cart-table">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Products</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th class="text-end">Sub-Total</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-label="Products">
+                          <div class="d-flex align-items-center">
+                            <button class="btn-close-custom me-2">&times;</button>
+                            <div class="cart-item">
+                              <figure>
+                                <img src="./images/pd-1.png" alt="Product 1">
+                              </figure>
+                              <div class="ms-2">Laminate It</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Price">$70</td>
+                        <td data-label="Quantity">50 Items</td>
+                        <td data-label="Sub-Total" class="fw-bold text-end">$70</td>
+                      </tr>
+                      <tr>
+                        <td data-label="Products">
+                          <div class="d-flex align-items-center">
+                            <button class="btn-close-custom me-2">&times;</button>
+                            <div class="cart-item">
+                              <figure>
+                                <img src="./images/pd-1.png" alt="Product 2">
+                              </figure>
+                              <div class="ms-2">Shape It!</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Price">$250</td>
+                        <td data-label="Quantity">50 Items</td>
+                        <td data-label="Sub-Total" class="fw-bold text-end">$250</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div> -->
+                <div class="sc-header">Shopping Cart</div>
+
+                <div class="sc-item">
+                  <div class="sc-details">
+                    <img src="./images/pd-1.png" alt="Backdrop">
+                    <div class="sc-name">Laminate It</div>
+                  </div>
+                  <div class="sc-qty-price">
+                    <div>1</div>
+                    <div>$310.00</div>
+                    <i class="fas fa-trash"></i>
+                  </div>
+                </div>
+
+                <div class="sc-item">
+                  <div class="sc-details">
+                    <img src="./images/pd-1.png" alt="Pop-Up">
+                    <div class="sc-name">Shape It!</div>
+                  </div>
+                  <div class="sc-qty-price">
+                    <div>1</div>
+                    <div>$5.00</div>
+                    <i class="fas fa-trash"></i>
+                  </div>
+                </div>
+
+                <div class="sc-total">Total &nbsp;&nbsp;&nbsp;&nbsp; $315.00</div>
+
+                <div class="cart-ft">
+                  <button class="btn sc-btn sc-btn-clear"><i class="fas fa-trash"></i> CLEAR CART</button>
+                  <button class="btn sc-btn sc-btn-view"><i class="fas fa-shopping-cart"></i> VIEW CART</button>
+                  <button class="btn sc-btn sc-btn-checkout"><i class="fas fa-arrow-right"></i> CHECKOUT</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- User Dropdown -->
+            <div class="dropdown">
+              <a href="javascript:void(0)" class="d-flex align-items-center text-decoration-none dropdown-toggle"
+                id="userDropdownDesktop" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="./images/user-orange.svg" alt="User avatar" width="32" height="32" class="me-2">
+                <p class="mb-0">John Deo</p>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdownDesktop">
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="#"><img src="./images/user.svg"
+                      alt="Profile icon" width="20" height="20"> Account Profile</a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="/new-order.html"><img
+                      src="./images/storefront.svg" alt="Orders icon" width="20" height="20"> My Orders</a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="/new-order.html"><img
+                      src="./images/heart.svg" alt="Saved icon" width="20" height="20"> Saved Orders</a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="/new-order.html"><img
+                      src="./images/notebook.svg" alt="Cards icon" width="20" height="20"> Manage Cards</a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="/new-order.html"><img
+                      src="./images/mappinline.svg" alt="Address icon" width="20" height="20"> Manage Addresses</a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="javascript:void(0)"><img
+                      src="./images/signout.svg" alt="Logout icon" width="20" height="20"> Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--  -->
+  <div class="cn-wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <!-- Toggle Button -->
+          <button id="orderTabsToggle" class="btn-main mb-2 d-lg-none collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#orderTabsCollapse" aria-expanded="false" aria-controls="orderTabsCollapse">
+            <i class="fa-solid fa-bars-staggered toggle-icon transition-icon"></i>
+          </button>
+
+          <!-- Collapse behavior on small screens, always visible on medium+ -->
+          <div class="collapse d-lg-block" id="orderTabsCollapse">
+            <div class="order-tabs nav flex-column nav-pills mb-3" id="v-pills-tab" role="tablist"
+              aria-orientation="vertical">
+              <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home"
+                type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                <i class="fa-solid fa-store"></i> <span class="ms-1">My Orders</span>
+              </button>
+              <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile"
+                type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                <i class="fa-regular fa-heart"></i> <span class="ms-1">Saved Orders</span>
+              </button>
+              <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill"
+                data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled"
+                aria-selected="false">
+                <i class="fa-solid fa-book"></i> <span class="ms-1">Manage Cards</span>
+              </button>
+              <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
+                aria-selected="false">
+                <i class="fa-solid fa-location-dot"></i> <span class="ms-1">Manage Addresses</span>
+              </button>
+              <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
+                data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings"
+                aria-selected="false">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i> <span class="ms-1">Log-out</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-9">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"
+              tabindex="0">
+              <div class="my-orders-table">
+                <div class="table-container table-responsive">
+                  <h3>MY ORDERS</h3>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>ORDER ID</th>
+                        <th>ORDER DATE</th>
+                        <th>GRAND TOTAL</th>
+                        <th>STATUS</th>
+                        <th>ACTION</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><a href="/order-details.html">#96459761</a></td>
+                        <td>Mar 26, 2025 07:52</td>
+                        <td>$80</td>
+                        <td><span class="status in-progress">IN PROGRESS</span></td>
+                        <td class="action-dots"> <button class="dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            •••
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">View Order</a></li>
+                            <li><a class="dropdown-item" href="#">Print</a></li>
+                            <li><a class="dropdown-item" href="#">OPS</a></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="/order-details.html">#71667167</a></td>
+                        <td>Mar 26, 2025 07:52</td>
+                        <td>$80</td>
+                        <td><span class="status completed">COMPLETED</span></td>
+                        <td class="action-dots"> <button class="dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            •••
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">View Order</a></li>
+                            <li><a class="dropdown-item" href="#">Print</a></li>
+                            <li><a class="dropdown-item" href="#">OPS</a></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="/order-details.html">#95214362</a></td>
+                        <td>Mar 26, 2025 07:52</td>
+                        <td>$80</td>
+                        <td><span class="status canceled">CANCELED</span></td>
+                        <td class="action-dots"> <button class="dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            •••
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">View Order</a></li>
+                            <li><a class="dropdown-item" href="#">Print</a></li>
+                            <li><a class="dropdown-item" href="#">OPS</a></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="/order-details.html">#71667167</a></td>
+                        <td>Mar 26, 2025 07:52</td>
+                        <td>$80</td>
+                        <td><span class="status completed">COMPLETED</span></td>
+                        <td class="action-dots"> <button class="dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            •••
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">View Order</a></li>
+                            <li><a class="dropdown-item" href="#">Print</a></li>
+                            <li><a class="dropdown-item" href="#">OPS</a></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="/order-details.html">#95214362</a></td>
+                        <td>Mar 26, 2025 07:52</td>
+                        <td>$80</td>
+                        <td><span class="status completed">COMPLETED</span></td>
+                        <td class="action-dots"> <button class="dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            •••
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">View Order</a></li>
+                            <li><a class="dropdown-item" href="#">Print</a></li>
+                            <li><a class="dropdown-item" href="#">OPS</a></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="/order-details.html">#95214362</a></td>
+                        <td>Mar 26, 2025 07:52</td>
+                        <td>$80</td>
+                        <td><span class="status completed">COMPLETED</span></td>
+                        <td class="action-dots"> <button class="dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            •••
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">View Order</a></li>
+                            <li><a class="dropdown-item" href="#">Print</a></li>
+                            <li><a class="dropdown-item" href="#">OPS</a></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="/order-details.html">#95214362</a></td>
+                        <td>Mar 26, 2025 07:52</td>
+                        <td>$80</td>
+                        <td><span class="status canceled">CANCELED</span></td>
+                        <td class="action-dots"> <button class="dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            •••
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">View Order</a></li>
+                            <li><a class="dropdown-item" href="#">Print</a></li>
+                            <li><a class="dropdown-item" href="#">OPS</a></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="/order-details.html">#96459761</a></td>
+                        <td>Mar 26, 2025 07:52</td>
+                        <td>$80</td>
+                        <td><span class="status completed">COMPLETED</span></td>
+                        <td class="action-dots"> <button class="dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            •••
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">View Order</a></li>
+                            <li><a class="dropdown-item" href="#">Print</a></li>
+                            <li><a class="dropdown-item" href="#">OPS</a></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="/order-details.html">#96459761</a></td>
+                        <td>Mar 26, 2025 07:52</td>
+                        <td>$80</td>
+                        <td><span class="status completed">COMPLETED</span></td>
+                        <td class="action-dots"> <button class="dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            •••
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">View Order</a></li>
+                            <li><a class="dropdown-item" href="#">Print</a></li>
+                            <li><a class="dropdown-item" href="#">OPS</a></li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="orders-card-list d-md-none">
+                    <!-- Single Card (Repeat for each order) -->
+                    <div class="order-card">
+                      <div class="card-actions">
+                        <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          •••
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                          <li><a class="dropdown-item" href="#">View Order</a></li>
+                          <li><a class="dropdown-item" href="#">Print</a></li>
+                          <li><a class="dropdown-item" href="#">OPS</a></li>
+                        </ul>
+                      </div>
+                      <div><strong>Order ID:</strong> <a href="/order-details.html">#96459761</a></div>
+                      <div><strong>Order Date:</strong> Mar 26, 2025 07:52</div>
+                      <div><strong>Grand Total:</strong> $80</div>
+                      <div><strong>Status:</strong> <span class="status in-progress">IN PROGRESS</span></div>
+                    </div>
+
+                    <!-- Repeat above .order-card for each entry -->
+                  </div>
+                  <div class="pagination">
+                    <button><i class="fa-solid fa-arrow-left"></i></button>
+                    <div class="page active">01</div>
+                    <div class="page">02</div>
+                    <div class="page">03</div>
+                    <div class="page">04</div>
+                    <div class="page">05</div>
+                    <div class="page">06</div>
+                    <button><i class="fa-solid fa-arrow-right"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"
+              tabindex="0">
+              <div class="my-orders-table table-responsive">
+                <div class="table-container">
+                  <h3>Saved orders</h3>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Serial No</th>
+                        <th>individual props</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                        <th>ACTION</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>#1</td>
+                        <td>Bookmarks</td>
+                        <td>$80.00</td>
+                        <td>Mar 26, 2025 07:52</td>
+                        <td class="action-dots"> <button class="dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            •••
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">View Order</a></li>
+                            <li><a class="dropdown-item" href="#">Print</a></li>
+                            <li><a class="dropdown-item" href="#">OPS</a></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#2</td>
+                        <td>Bookmarks</td>
+                        <td>$80.00</td>
+                        <td>Mar 26, 2025 07:52</td>
+                        <td class="action-dots"> <button class="dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            •••
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">View Order</a></li>
+                            <li><a class="dropdown-item" href="#">Print</a></li>
+                            <li><a class="dropdown-item" href="#">OPS</a></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#3</td>
+                        <td>Bookmarks</td>
+                        <td>$80.00</td>
+                        <td>Mar 26, 2025 07:52</td>
+                        <td class="action-dots"> <button class="dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            •••
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">View Order</a></li>
+                            <li><a class="dropdown-item" href="#">Print</a></li>
+                            <li><a class="dropdown-item" href="#">OPS</a></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#4</td>
+                        <td>Bookmarks</td>
+                        <td>$80.00</td>
+                        <td>Mar 26, 2025 07:52</td>
+                        <td class="action-dots"> <button class="dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            •••
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">View Order</a></li>
+                            <li><a class="dropdown-item" href="#">Print</a></li>
+                            <li><a class="dropdown-item" href="#">OPS</a></li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="orders-card-list-saved d-md-none">
+                    <!-- Single Card (Repeat for each row) -->
+                    <div class="order-card">
+                      <div class="card-actions">
+                        <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          •••
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                          <li><a class="dropdown-item" href="#">View Order</a></li>
+                          <li><a class="dropdown-item" href="#">Print</a></li>
+                          <li><a class="dropdown-item" href="#">OPS</a></li>
+                        </ul>
+                      </div>
+                      <div><strong>Serial No:</strong> #1</div>
+                      <div><strong>Individual Props:</strong> Bookmarks</div>
+                      <div><strong>Amount:</strong> $80.00</div>
+                      <div><strong>Date:</strong> Mar 26, 2025 07:52</div>
+
+                    </div>
+
+                    <!-- Repeat for each saved order -->
+                  </div>
+
+                  <div class="pagination">
+                    <button><i class="fa-solid fa-arrow-left"></i></button>
+                    <div class="page active">01</div>
+                    <div class="page">02</div>
+                    <div class="page">03</div>
+                    <div class="page">04</div>
+                    <div class="page">05</div>
+                    <div class="page">06</div>
+                    <button><i class="fa-solid fa-arrow-right"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab"
+              tabindex="0">
+              <div class="my-orders-table">
+                <div class="table-container">
+                  <div class="mb-3 px-3 d-flex align-items-center justify-content-between flex-wrap">
+                    <h3 class="mb-0 p-0">Manage Cards</h3>
+                    <button class="btn-main" data-bs-toggle="modal" data-bs-target="#exampleModal">Add New Card</button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                      aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header p-0 border-0 pb-2">
+                            <h5 class="modal-title" id="exampleModalLabel">Add New Card</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <!-- Content for the modal goes here -->
+                            <form>
+                              <div class="row">
+                                <div class="col-lg-12">
+                                  <label for="cardName" class="form-label">Name On Card</label>
+                                  <input type="text" class="form-control" id="cardName" placeholder="John Doe">
+                                </div>
+
+                                <div class="col-lg-12 mt-3">
+                                  <label for="cardNumber" class="form-label">Card Number</label>
+                                  <input type="number" class="form-control" id="cardNumber"
+                                    placeholder="1234 5678 9012 3456">
+                                </div>
+
+                                <div class="col-lg-6 mt-3">
+                                  <label for="expiryDate" class="form-label">Expiry Date</label>
+                                  <input type="text" class="form-control" id="expiryDate" placeholder="MM/YYYY">
+                                </div>
+
+                                <div class="col-lg-6 mt-3">
+                                  <label for="cvc" class="form-label">CVC</label>
+                                  <input type="number" class="form-control" id="cvc" placeholder="123">
+                                </div>
+
+                                <div class="col-lg-6 mt-3">
+                                  <div class="form-check p-0 modal-ch">
+                                    <input class="form-check-input" type="checkbox" value="" id="saveCard">
+                                    <label class="form-check-label" for="saveCard">
+                                      Save Card
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-footer p-0 border-0 mt-2">
+                            <button type="button" class="btn-main">Save Card</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table-responsive">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Serial No</th>
+                          <th>Card Name</th>
+                          <th>Card Number</th>
+                          <th>Primary Card</th>
+                          <th>ACTION</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>#1</td>
+                          <td>Mastercard Premium Card</td>
+                          <td>XXXXXXXXXXXX5454</td>
+                          <td>Primary</td>
+                          <td class="action-dots"> <button class="dropdown-toggle" type="button" id="dropdownMenuButton"
+                              data-bs-toggle="dropdown" aria-expanded="false">
+                              •••
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                              <li><a class="dropdown-item" href="#">View Order</a></li>
+                              <li><a class="dropdown-item" href="#">Print</a></li>
+                              <li><a class="dropdown-item" href="#">OPS</a></li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>#2</td>
+                          <td>Visa Gold Card</td>
+                          <td>XXXXXXXXXXXX5454</td>
+                          <td>Not Primary</td>
+                          <td class="action-dots"> <button class="dropdown-toggle" type="button" id="dropdownMenuButton"
+                              data-bs-toggle="dropdown" aria-expanded="false">
+                              •••
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                              <li><a class="dropdown-item" href="#">View Order</a></li>
+                              <li><a class="dropdown-item" href="#">Print</a></li>
+                              <li><a class="dropdown-item" href="#">OPS</a></li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>#3</td>
+                          <td>Mastercard Premium Card</td>
+                          <td>XXXXXXXXXXXX5454</td>
+                          <td>Not Primary</td>
+                          <td class="action-dots"> <button class="dropdown-toggle" type="button" id="dropdownMenuButton"
+                              data-bs-toggle="dropdown" aria-expanded="false">
+                              •••
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                              <li><a class="dropdown-item" href="#">View Order</a></li>
+                              <li><a class="dropdown-item" href="#">Print</a></li>
+                              <li><a class="dropdown-item" href="#">OPS</a></li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>#4</td>
+                          <td>Visa Gold Card</td>
+                          <td>XXXXXXXXXXXX5454</td>
+                          <td>Not Primary</td>
+                          <td class="action-dots"> <button class="dropdown-toggle" type="button" id="dropdownMenuButton"
+                              data-bs-toggle="dropdown" aria-expanded="false">
+                              •••
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                              <li><a class="dropdown-item" href="#">View Order</a></li>
+                              <li><a class="dropdown-item" href="#">Print</a></li>
+                              <li><a class="dropdown-item" href="#">OPS</a></li>
+                            </ul>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="cards-list-manage d-md-none">
+                      <!-- Single Card -->
+                      <div class="card-entry">
+                        <div class="card-actions">
+                          <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">•••</button>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">View Order</a></li>
+                            <li><a class="dropdown-item" href="#">Print</a></li>
+                            <li><a class="dropdown-item" href="#">OPS</a></li>
+                          </ul>
+                        </div>
+                        <div><strong>Serial No:</strong> #1</div>
+                        <div><strong>Card Name:</strong> Mastercard Premium Card</div>
+                        <div><strong>Card Number:</strong> XXXXXXXXXXXX5454</div>
+                        <div><strong>Primary Card:</strong> Primary</div>
+       
+                      </div>
+
+                      <!-- Repeat for other cards -->
+                    </div>
+
+                  </div>
+
+                  <div class="pagination">
+                    <button><i class="fa-solid fa-arrow-left"></i></button>
+                    <div class="page active">01</div>
+                    <div class="page">02</div>
+                    <div class="page">03</div>
+                    <div class="page">04</div>
+                    <div class="page">05</div>
+                    <div class="page">06</div>
+                    <button><i class="fa-solid fa-arrow-right"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"
+              tabindex="0">
+              <div class="row mb-4">
+                <!-- Billing Address -->
+                <div class="col-md-6 mb-md-0 mb-3">
+                  <div class="card-bill-wrapper">
+                    <div class="card-bill-shop">
+                      <input class="form-check-input" type="checkbox" id="billing-check" name="billingAddress" checked>
+                      <label for="billing-check" class="card-label">
+                        <div class="card-content">
+                          <div class="d-flex align-items-center justify-content-between flex-wrap mb-4">
+                            <!-- <div class="custom-radio"></div> -->
+                            <span class="form-check-label">Billing Address</span>
+                            <div>
+                              <div class="icon-button edit-button">
+                                <i class="fas fa-pencil-alt"></i>
+                              </div>
+
+                              <div class="icon-button delete-button">
+                                <i class="fas fa-trash-alt"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <h4>Kevin Gilbert</h4>
+                          <p>East Washington Square South, Word No. 04, Road No. 13/x, House no. 1320/C, Flat No. 5D70,
+                            New
+                            York, NY 10012, United States</p>
+                          <button class="btn-main" type="button">Default Address</button>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Shipping Address -->
+                <div class="col-md-6 mb-md-0 mb-3">
+                  <div class="card-bill-wrapper">
+                    <div class="card-bill-shop">
+                      <input class="form-check-input" type="checkbox" id="shipping-check" name="shippingAddress"
+                        checked>
+                      <label for="shipping-check" class="card-label">
+                        <div class="card-content">
+                          <div class="d-flex align-items-center justify-content-between flex-wrap mb-4">
+                            <!-- <div class="custom-radio"></div> -->
+                            <span class="form-check-label">Shipping Address</span>
+                            <div>
+                              <div class="icon-button edit-button">
+                                <i class="fas fa-pencil-alt"></i>
+                              </div>
+
+                              <div class="icon-button delete-button">
+                                <i class="fas fa-trash-alt"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <h4>Corey Siphron</h4>
+                          <p>East Washington Square South, Word No. 04, Road No. 13/x, House no. 1320/C, Flat No. 5D70,
+                            New
+                            York, NY 10012, United States</p>
+                          <button class="edit-add" type="button">Make This Default Address</button>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button class="btn-main mb-4" data-bs-toggle="modal" data-bs-target="#addAddressModal">
+                  Add New Address <i class="ms-2 fa-solid fa-arrow-right"></i>
+                </button>
+
+                <!-- Modal for Adding Address -->
+                <div class="modal fade" id="addAddressModal" tabindex="-1" aria-labelledby="addAddressModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header p-0 border-0 mb-3">
+                        <h5 class="modal-title" id="addAddressModalLabel">Add Billing Address</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <!-- Billing Address Form -->
+                        <form>
+                          <div class="row">
+                            <!-- Billing Address -->
+                            <div class="col-md-12 mb-3">
+                              <label class="form-label">Address Line 1</label>
+                              <input type="text" class="form-control" placeholder="Enter address line 1">
+                            </div>
+                            <div class="col-md-12 mb-3">
+                              <label class="form-label">Address Line 2</label>
+                              <input type="text" class="form-control" placeholder="Enter address line 2">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                              <label class="form-label">Country</label>
+                              <select class="select2">
+                                <option selected>Select</option>
+                                <!-- Add country options here -->
+                                <option value="us">United States</option>
+                                <option value="ca">Canada</option>
+                                <option value="in">India</option>
+                              </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                              <label class="form-label">State</label>
+                              <select class="select2">
+                                <option selected>Select</option>
+                                <option value="ny">New York</option>
+                                <option value="ca">California</option>
+                                <option value="tx">Texas</option>
+                              </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                              <label class="form-label">City</label>
+                              <select class="select2">
+                                <option selected>Select</option>
+                                <option value="nyc">New York City</option>
+                                <option value="la">Los Angeles</option>
+                                <option value="sf">San Francisco</option>
+                              </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                              <label class="form-label">Zip Code</label>
+                              <input type="text" class="form-control" placeholder="Enter zip code">
+                            </div>
+                          </div>
+
+                          <hr>
+
+                          <!-- Shipping Address -->
+                          <h5 class="mb-3">Add Shipping Address</h5>
+                          <div class="row">
+                            <div class="col-md-12 mb-3">
+                              <label class="form-label">Address Line 1</label>
+                              <input type="text" class="form-control" placeholder="Enter address line 1">
+                            </div>
+                            <div class="col-md-12 mb-3">
+                              <label class="form-label">Address Line 2</label>
+                              <input type="text" class="form-control" placeholder="Enter address line 2">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                              <label class="form-label">Country</label>
+                              <select class="select2">
+                                <option selected>Select</option>
+                                <option value="us">United States</option>
+                                <option value="ca">Canada</option>
+                                <option value="in">India</option>
+                              </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                              <label class="form-label">State</label>
+                              <select class="select2">
+                                <option selected>Select</option>
+                                <option value="ny">New York</option>
+                                <option value="ca">California</option>
+                                <option value="tx">Texas</option>
+                              </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                              <label class="form-label">City</label>
+                              <select class="select2">
+                                <option selected>Select</option>
+                                <option value="nyc">New York City</option>
+                                <option value="la">Los Angeles</option>
+                                <option value="sf">San Francisco</option>
+                              </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                              <label class="form-label">Zip Code</label>
+                              <input type="text" class="form-control" placeholder="Enter zip code">
+                            </div>
+                          </div>
+                        </form>
+
+                        <div class="modal-footer justify-content-start p-0 border-0 ">
+                          <button type="button" class="btn-main">Add New Address <i
+                              class="ms-2 fa-solid fa-arrow-right"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+            </div>
+            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"
+              tabindex="0">
+              <!-- Log-out Content -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+
+        <!-- Logo & Contact -->
+        <div class="col-lg-3">
+          <a href="/" aria-label="Go to homepage">
+            <img src="./images/logo-white.svg" alt="Life Celebration Logo">
+          </a>
+          <div class="contact">
+            <span>Call Us At:</span>
+            <a href="tel:888-887-3782">888-887-3782</a>
+          </div>
+          <div class="contact">
+            <span>Email Us At:</span>
+            <a href="mailto:jcummings@lifecelebration.com">jcummings@lifecelebration.com</a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-3">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="#">Place New Order</a></li>
+            <li><a href="#">My Orders</a></li>
+            <li><a href="#">Saved Orders</a></li>
+          </ul>
+        </div>
+
+        <!-- About -->
+        <div class="col-lg-3">
+          <h5>About Life Celebrations</h5>
+          <p>
+            We are the profession's leader in designing, creating, and shipping customized memorial products
+            for funeral homes across America—and even one Canadian town!
+          </p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="col-lg-3">
+          <h5>Follow Us</h5>
+          <ul class="social-link">
+            <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+            <li><a href="#" aria-label="Google Plus"><i class="fa-brands fa-google-plus-g"></i></a></li>
+            <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="mailto:jcummings@lifecelebration.com" aria-label="Email"><i
+                  class="fa-solid fa-envelope"></i></a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="ft-bootm">
+      <p>© 2025 Life Celebration Inc. ® All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Javascript -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="./js/custom.js"></script>
+</body>
+
+</html>
