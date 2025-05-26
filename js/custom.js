@@ -13,7 +13,7 @@ $(document).ready(function () {
     // Check if OTP input exists and button text is 'Verify OTP'
     else if (otpInput && actionButtonText === 'Verify OTP') {
       alert('OTP Verified!');
-      window.location.href = '/product-details.html';
+      window.location.href = 'lc-dashboard/product-details.html';
     }
   });
 
